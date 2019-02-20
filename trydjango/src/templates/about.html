@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content2 %}
+<h1>About</h1>
+<p>This is a template</p>
+<h2>{{ my_number }}</h2>
+
+<ul>
+    {% for items in my_list %}
+        <li>{{ forloop.counter }} - {{ items }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
