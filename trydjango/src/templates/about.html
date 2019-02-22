@@ -1,14 +1,23 @@
 {% extends 'base.html' %}
 
-{% block content2 %}
+{% block content %}
 <h1>About</h1>
 <p>This is a template</p>
 <h2>{{ my_number }}</h2>
 
 <ul>
     {% for items in my_list %}
-        <li>{{ forloop.counter }} - {{ items }}</li>
+        <li>{{ forloop.counter|add:371 }} - {{ items|title|slugify|title }}</li>
+        
     {% endfor %}
 </ul>
+
+{% for o in my_list %}
+    <tr class="{% cycle 'row1' 'row2' %}">
+        {{ o|slugify }}
+    </tr>
+
+ <!-- <p>{% lorem 30 w random %}</p>     -->
+{% endfor %}
 
 {% endblock %}

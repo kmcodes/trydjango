@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Item</h1>
+<p>{% if not objects.description %}{{ objects.description }} {% else %} <h4 style="color:blue">Good Description</h4> {% endif %}</p>
+
+{% endblock %}
