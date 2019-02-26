@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Item</h1>
+<!-- <h1>Item</h1>
 <p>{% if objects.title %}-{{ objects.title|center:'300' }}- {% else %} <h4 style="color:blue">Good Description</h4> {% endif %}</p>
 <p>{% now "jS F Y T g:i W t" %}</p>
+ -->
+<h1>{{ object.title }}</h1>
+<p>{{ object.description }}</p>
+<p>{{ object.price }}</p>
+
 
 {% endblock %}
